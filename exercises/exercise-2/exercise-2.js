@@ -70,3 +70,18 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+//Task 1:
+let peopleInGryffindor = hogwarts
+      .filter((people) => people.house == "Gryffindor")
+      .map((people) => `${people.firstName} ${people.lastName}`)
+
+console.log(peopleInGryffindor.toString())
+
+//Task 2:
+let teachersWithPets = hogwarts
+      .filter((people) => people.pet != null && people.occupation == "Teacher")
+      .map((people) => `${people.firstName} ${people.lastName}`)
+
+console.log(teachersWithPets.toString())
+
