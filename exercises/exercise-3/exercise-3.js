@@ -13,11 +13,11 @@ let header = `QTY     ITEM         TOTAL`;
 let receiptList = order
       .map((item) => `${item.quantity}    ${item.itemName}    £${item.unitPrice}`)
 
-let arrayOfPrice = order
-      .map((item) => item.unitPrice);
 
+//find the total:
+let arrayOfPrice = order.map((item) => item.quantity * item.unitPrice);
 let total = arrayOfPrice.reduce((a, b) => (a + b));
 
 console.log(header);
 console.log(receiptList);
-console.log(total);
+console.log(`Total: £${total}`);
